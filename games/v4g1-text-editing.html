@@ -1341,11 +1341,15 @@
             'es-419': 'ES',
             'nan-Hokkien': '閩',
             'hak': '客',
-            'wuu': '吳'
+            'wuu': '吳',
+            'de-CH': 'DE',
+            'it-IT': 'IT',
+            'fr-FR': 'FR',
+            'da-DK': 'DA'
         };
 
         function updateSwitchLabel() {
-            switchBtn.textContent = '🌐 ' + LABEL_ABBR[currentLocale];
+            switchBtn.textContent = '🌐 ' + (LABEL_ABBR[currentLocale] || (currentLocale || 'EN').slice(0, 2).toUpperCase());
         }
         function hidePicker() { picker.style.display = 'none'; }
         function showPicker() { picker.style.display = 'flex'; }
