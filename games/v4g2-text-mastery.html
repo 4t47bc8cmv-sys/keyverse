@@ -858,6 +858,17 @@
         document.getElementById('study-screen').style.display = 'none';
         document.getElementById('game-screen').style.display = 'none';
         document.getElementById(screenId).style.display = 'block';
+        // Answer-fairness (2026-07-18): the static educational reference guide (.kv-learn)
+        // stays visible on the level-selection menu (and initial load) so it remains genuine,
+        // crawlable, user-visible content; it is hidden during active study/practice/test so the
+        // answer tables cannot be consulted mid-challenge, and restored on return to the menu.
+        try {
+            var kvGuides = document.querySelectorAll('section.kv-learn');
+            for (var kvi = 0; kvi < kvGuides.length; kvi++) {
+                if (kvGuides[kvi].closest && kvGuides[kvi].closest('noscript')) continue;
+                kvGuides[kvi].style.display = (screenId === 'level-screen') ? '' : 'none';
+            }
+        } catch (e) {}
     }
 
     function loadLevelMenu() {
