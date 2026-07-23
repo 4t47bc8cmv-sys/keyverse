@@ -27,6 +27,8 @@
 </script>
 
     <meta charset="UTF-8">
+    <meta name="google-adsense-account" content="ca-pub-2120991969522232">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2120991969522232" crossorigin="anonymous"></script>
     <!-- Security hardening (added in review): strict CSP, no external resources; no eval/new Function; self-contained. -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; manifest-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -537,7 +539,6 @@
         console.log('%c' + MRS_COPYRIGHT.watermark, 'color:#89b4fa;font-weight:bold;');
     }
 
-
     // ============================================================
     // KEYVERSE PLATFORM DETECTION (Mac / Windows / iOS / Android)
     // ============================================================
@@ -570,7 +571,6 @@
             //  or use physical Ctrl which already lights up state.ctrl.)
         });
     }
-
 
     // AUTOMATIC SPLASH EXIT CONTROLLER
     window.addEventListener('DOMContentLoaded', () => {
@@ -1313,7 +1313,6 @@
     try { if (typeof testQueue !== 'undefined')       Object.defineProperty(window, 'testQueue',    { get(){ return testQueue;    }, configurable:true }); } catch(_){}
     try { if (typeof t === 'function')                window.t                = t;                } catch(_){}
 
-
     // ============================================================
     // KEYVERSE v06 — Touch-press visualizer (iPhone parity)
     // ============================================================
@@ -1514,7 +1513,6 @@
      * or inspect <html data-mrs-copyright="..."> attribute.
      * ================================================================ */
 
-
     // ===== LANGUAGE PICKER STARTUP =====
     (function initLanguagePicker() {
         const picker = document.getElementById('lang-picker');
@@ -1579,27 +1577,6 @@
   =============================================================
 -->
 
-<!-- ================================================================
-     H5 GAMES ADS — INERT ACTIVATION EXAMPLE (DO NOT UNCOMMENT YET)
-     Enable ONLY after: owner approval + AdSense site approval +
-     separate H5 Games Ads approval. Loader + adConfig must live in
-     the SAME game document (H5 requirement). No display ad slot ID is
-     needed for H5 Games Ads.
-
-<script async data-ad-frequency-hint="120s"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2120991969522232"
-        crossorigin="anonymous"></script>
-<script>
-  window.adsbygoogle = window.adsbygoogle || [];
-  window.adBreak = window.adConfig = function(o){ adsbygoogle.push(o); };
-  adConfig({
-    preloadAdBreaks: 'on',
-    sound: 'off',
-    onReady: function(){ /* Ad Placement API ready */ }
-  });
-  // Then flip KEYVERSE_H5_ADS_ENABLED to true in installKeyverseH5Ads().
-</script>
-============================================================ -->
     <!-- KEYVERSE v07 -- Between-level "Level Complete" overlay (honest, no ad gate) -->
     <div id="kv-interstitial" style="position:fixed;inset:0;background:rgba(17,17,27,0.96);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px;">
       <div style="background:#252538;border:2px solid #a6e3a1;border-radius:14px;padding:28px 22px;max-width:380px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,0.6);">
